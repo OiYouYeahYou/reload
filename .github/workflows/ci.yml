@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm unitTests
+      - run: npm run unitTests
       - run: npm run report-coverage
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
